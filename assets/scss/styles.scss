@@ -1,0 +1,153 @@
+@font-face {
+ 	font-family: BebasNeue;
+ 	src: url("BebasNeue.otf") format("opentype");
+}
+
+@font-face {
+ 	font-family: BebasNeueBold;
+ 	src: url("BebasNeueBold.otf") format("opentype");
+}
+
+@font-face {
+ 	font-family: BebasNeueBook;
+ 	src: url("BebasNeueBook.otf") format("opentype");
+}
+
+@font-face {
+ 	font-family: BebasNeueThin;
+ 	src: url("BebasNeueThin.otf") format("opentype");
+}
+
+@font-face {
+ 	font-family: BebasNeueLight;
+ 	src: url("BebasNeueLight.otf") format("opentype");
+}
+
+@mixin tracking($psvalue) {
+  letter-spacing: $psvalue / 1000 + em;
+}
+
+/* 
+Functions
+ */
+@function rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+$black: #222;
+$white: #FFF;
+
+$gutter: rem(30);
+
+
+/* z-index scale */
+$z1: 1;
+$z2: 2;
+$z3: 3;
+
+/* z-index implementations */
+$GLOBAL_HEADER--zIndex: $z3;
+
+
+body {
+	background-color: $white;
+	font-family: BebasNeue, 'Helvetica Neue', 'sans-serif';
+}
+
+.container {
+	margin: 0 auto;
+	width: rem(1170);
+}
+
+header {
+	clear: both;
+	height: rem(126);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: $GLOBAL_HEADER--zIndex;
+	
+	h1 {
+		font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
+		float: left;
+		font-size: 3.5em;
+		margin: rem(35) 0;
+	}
+
+	nav {
+		float: right;
+
+		a {
+			color: $black;
+			display: inline-block;
+			font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
+			font-size: 2rem;
+			margin: rem(47) $gutter 0 0;
+			position: relative;
+			text-decoration: none;
+
+			&:after {
+				background-color: $black;
+				bottom: 0;
+				content: "";
+				height: 2px;
+				left: 0;
+				margin-top: 2px;
+				position: absolute;
+				transform-origin: 0 0;
+				transform: scaleX(0);
+				transition: .37s cubic-bezier(.52,.01,.16,1);
+				width: 100%;
+			}
+
+			&:hover {
+				&:after {
+					transition: .37s cubic-bezier(.52,.01,.16,1);
+					transform: scaleX(1);
+				}
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+header, nav, .work-index {
+	margin-bottom: $gutter;
+}
+
+.work-index {
+	margin-top: rem(126);
+}
+
+.work {
+	float: left;
+	background-color: #DDD;
+	width: 570px;
+	height: 380px;
+	margin-left: 0;
+	margin-right: $gutter;
+	position: relative;
+	margin-bottom: $gutter;
+
+	p {
+		position: absolute;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	&:nth-child(even) {
+		margin-right: 0;
+	}
+
+	@media screen and (max-width: 435px) {
+		margin-left: $gutter;
+	}
+}

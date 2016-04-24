@@ -1,0 +1,13 @@
+<section class="work-index">
+	<% page_data.each do |work| %>
+		<section class="work">
+			<p><%= work["name"] %></p>
+			<a href="<%= work["url"] %>" class=""><img src="<%= work['default_img'] %>" /></a>
+			<figure>
+				<figcaption>
+					
+				</figcaption>
+			</figure>
+		</section>
+	<% end %>
+</section>

@@ -1,0 +1,30 @@
+[{
+	"name": "fplwatch",
+  "url": "http://www.fplwatch.com/",
+  "default_img": ""
+},
+{
+	"name": "slader",
+  "url": "http://www.slader.com/",
+  "default_img": "slader.png"
+},
+{
+	"name": "sierra-mist",
+  "url": "http://www.sierramist.com/",
+  "default_img": "sierra-mist.png"
+},
+{
+	"name": "tylenol",
+  "url": "http://www.tylenol.com/",
+  "default_img": "tylenol.png"
+},
+{
+	"name": "mry",
+  "url": "http://www.mry.com/",
+  "default_img": "mry.png"
+},
+{
+	"name": "jade-hotel",
+  "url": "http://www.thejadenyc.com/",
+  "default_img": "jade-nyc.png" 
+}]

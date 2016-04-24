@@ -1,0 +1,4 @@
+vendor/
+.bundle
+.DS_store
+node_modules/
