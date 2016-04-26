@@ -1,58 +1,12 @@
-@font-face {
- 	font-family: BebasNeue;
- 	src: url("BebasNeue.otf") format("opentype");
-}
-
-@font-face {
- 	font-family: BebasNeueBold;
- 	src: url("BebasNeueBold.otf") format("opentype");
-}
-
-@font-face {
- 	font-family: BebasNeueBook;
- 	src: url("BebasNeueBook.otf") format("opentype");
-}
-
-@font-face {
- 	font-family: BebasNeueThin;
- 	src: url("BebasNeueThin.otf") format("opentype");
-}
-
-@font-face {
- 	font-family: BebasNeueLight;
- 	src: url("BebasNeueLight.otf") format("opentype");
-}
-
-@mixin tracking($psvalue) {
-  letter-spacing: $psvalue / 1000 + em;
-}
-
-/* 
-Functions
- */
-@function rem($size) {
-  $remSize: $size / 16;
-  @return #{$remSize}rem;
-}
-
-$black: #222;
-$white: #FFF;
-
-$gutter: rem(30);
-
-
-/* z-index scale */
-$z1: 1;
-$z2: 2;
-$z3: 3;
-
-/* z-index implementations */
-$GLOBAL_HEADER--zIndex: $z3;
-
+@import 'lib';
+@import 'vars';
+@import 'fonts';
+@import 'zindex';
 
 body {
 	background-color: $white;
 	font-family: BebasNeue, 'Helvetica Neue', 'sans-serif';
+	text-rendering: optimizelegibility;
 }
 
 .container {
@@ -60,9 +14,58 @@ body {
 	width: rem(1170);
 }
 
+.inner {
+	margin: 0 auto;
+	width: rem(585);
+}
+
+.cv {
+	margin-top: $navHeight;
+	z-index: $CV--zIndex;
+	position: relative;
+}
+
+h2 span,
+.cv p {
+	font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+	line-height: 1.5;
+	font-size: rem(16);
+}
+
+.job {
+	margin-bottom: 60px;
+}
+
+a:not(.work) {
+	color: $black;
+	position: relative;
+	text-decoration: none;
+
+	&:after {
+		background-color: $black;
+		bottom: 0;
+		content: "";
+		height: 2px;
+		left: 0;
+		margin-top: 2px;
+		position: absolute;
+		transform-origin: 0 0;
+		transform: scaleX(0);
+		transition: $standard_transition;
+		width: 100%;
+	}
+
+	&:hover {
+		&:after {
+			transition: $standard_transition;
+			transform: scaleX(1);
+		}
+	}
+}
+
 header {
 	clear: both;
-	height: rem(126);
+	height: $navHeight;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -98,13 +101,13 @@ header {
 				position: absolute;
 				transform-origin: 0 0;
 				transform: scaleX(0);
-				transition: .37s cubic-bezier(.52,.01,.16,1);
+				transition: $standard_transition;
 				width: 100%;
 			}
 
 			&:hover {
 				&:after {
-					transition: .37s cubic-bezier(.52,.01,.16,1);
+					transition: $standard_transition;
 					transform: scaleX(1);
 				}
 			}

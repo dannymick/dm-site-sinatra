@@ -1,3 +1,9 @@
+/* 
+Mixins
+ */
+/* 
+Functions
+ */
 @font-face {
   font-family: BebasNeue;
   src: url("BebasNeue.otf") format("opentype"); }
@@ -18,18 +24,54 @@
   font-family: BebasNeueLight;
   src: url("BebasNeueLight.otf") format("opentype"); }
 
-/* 
-Functions
- */
 /* z-index scale */
 /* z-index implementations */
 body {
   background-color: #FFF;
-  font-family: BebasNeue, 'Helvetica Neue', 'sans-serif'; }
+  font-family: BebasNeue, 'Helvetica Neue', 'sans-serif';
+  text-rendering: optimizelegibility; }
 
 .container {
   margin: 0 auto;
   width: 73.125rem; }
+
+.inner {
+  margin: 0 auto;
+  width: 36.5625rem; }
+
+.cv {
+  margin-top: 7.875rem;
+  z-index: 3;
+  position: relative; }
+
+h2 span,
+.cv p {
+  font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+  line-height: 1.5;
+  font-size: 1rem; }
+
+.job {
+  margin-bottom: 60px; }
+
+a:not(.work) {
+  color: #222;
+  position: relative;
+  text-decoration: none; }
+  a:not(.work):after {
+    background-color: #222;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin-top: 2px;
+    position: absolute;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    transition: 0.37s cubic-bezier(0.52, 0.01, 0.16, 1);
+    width: 100%; }
+  a:not(.work):hover:after {
+    transition: 0.37s cubic-bezier(0.52, 0.01, 0.16, 1);
+    transform: scaleX(1); }
 
 header {
   clear: both;
@@ -38,7 +80,7 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 3; }
+  z-index: 1; }
   header h1 {
     font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
     float: left;
