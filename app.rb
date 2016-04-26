@@ -17,6 +17,10 @@ class App < Sinatra::Base
 		erb :index, :locals => {:page_data => @@page_data }
 	end
 
+	get '/cv' do
+		erb :cv, :locals => {:page_data => @@page_data }
+	end
+
 	get '/work/:project' do |proj|
 		# puts "#{proj}".is_a?(String)
 		erb :project, :locals => {:project => params[:project], :url => @@page_data[proj]['url'] }
