@@ -3,6 +3,7 @@
 #  run app: bundle exec rackup config.ru
 require 'sinatra'
 require 'json'
+configure { set :server, :puma }
 
 class App < Sinatra::Base
 	set :static, true
@@ -22,9 +23,15 @@ class App < Sinatra::Base
 	end
 
 	get '/work/:project' do |proj|
-		# puts "#{proj}".is_a?(String)
-		erb :project, :locals => {:project => params[:project], :url => @@page_data[proj]['url'] }
-		# erb :project, :locals => {:project => params[:project]}
+		@project = ""
+		@@page_data.each do |work|
+			if work["name"] == proj 
+				@project = work
+			end
+		end
+		puts @project
+		erb :project, :locals => {:project => @project }
+		# erb :project, :locals => {:page_data => @@page_data }
 	end
 end
 

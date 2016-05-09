@@ -1,0 +1,26 @@
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby -r ./siteconf20160502-3149-k9ollo.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+puma_http11.c:405:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+puma_http11.c:405:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+linking shared-object puma/puma_http11.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20160502-3149-1dq4cz6/puma
+installing default puma_http11 libraries

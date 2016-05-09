@@ -10,6 +10,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    puma (3.4.0)
     rack (1.5.5)
     rack-protection (1.5.3)
       rack
@@ -19,6 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  puma
   sinatra!
 
 BUNDLED WITH

@@ -1,30 +1,48 @@
 [{
-	"name": "fplwatch",
-  "url": "http://www.fplwatch.com/",
-  "default_img": ""
-},
-{
-	"name": "slader",
+  "name": "slader",
   "url": "http://www.slader.com/",
-  "default_img": "slader.png"
+  "default_img": "slader_imac.jpg",
+  "client": "",
+  "feature": "",
+  "blurb": "Slader is an online student resource for tutoring, textbook solutions and a forum for knowledge. My responsibilites included revamping the entire front end of the Slader website,"
 },
 {
-	"name": "sierra-mist",
-  "url": "http://www.sierramist.com/",
-  "default_img": "sierra-mist.png"
+	"name": "sumday",
+  "url": "http://www.sumday.com/",
+  "default_img": "sumday_macbook.jpg",
+  "client": "BNY Mellon [MRY]",
+  "feature": "sumday_showcase.png",
+  "blurb": "Sumday is a investment app that allows you to save for your future by simply adding the #sumday hashtag to your social media posts."
 },
 {
 	"name": "tylenol",
   "url": "http://www.tylenol.com/",
-  "default_img": "tylenol.png"
+  "default_img": "tylenol_macbook.jpg",
+  "client": "Tylenol [MRY]",
+  "feature": "",
+  "blurb": "America's hangover cure, Tylenol, reached out to MRY for a hip new responsive website with a Drupal 7 backend to replace their old, ugly flash website. Over the course of six weeks I worked on this project with two other developers, all three of us had no prior knowledge of Drupal or Drupal theming but we managed to pull it out in the tight timeframe."
+},
+{
+  "name": "sierra-mist",
+  "url": "http://www.sierramist.com/",
+  "default_img": "sierra_mist_feature.jpg",
+  "client": "Pepsi Co. [Kettle]",
+  "feature": "",
+  "blurb": ""
 },
 {
 	"name": "mry",
   "url": "http://www.mry.com/",
-  "default_img": "mry.png"
+  "default_img": "mry_macbook.jpg",
+  "client": "MRY",
+  "feature": "",
+  "blurb": ""
 },
 {
 	"name": "jade-hotel",
   "url": "http://www.thejadenyc.com/",
-  "default_img": "jade-nyc.png" 
+  "default_img": "jade_imac.jpg",
+  "client": "Jade Hotel [Open Hospitality]",
+  "feature": "",
+  "blurb": ""
 }]

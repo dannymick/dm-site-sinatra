@@ -1,17 +1,17 @@
+@import 'fonts';
 @import 'lib';
 @import 'vars';
-@import 'fonts';
-@import 'zindex';
 
 body {
 	background-color: $white;
-	font-family: BebasNeue, 'Helvetica Neue', 'sans-serif';
-	text-rendering: optimizelegibility;
 }
 
 .container {
 	margin: 0 auto;
-	width: rem(1170);
+	width: 100%;
+	@include breakpoint(48em) {
+		width: rem(1170);
+	}
 }
 
 .inner {
@@ -23,6 +23,22 @@ body {
 	margin-top: $navHeight;
 	z-index: $CV--zIndex;
 	position: relative;
+
+	h2, h3 {
+		font-family: BebasNeue;
+		text-rendering: optimizelegibility;
+	}
+
+	h2 {
+		@include tracking(25);
+	}
+
+	h3 {
+		@include tracking(50);
+		a {
+			// @include tracking(50);
+		}
+	}
 }
 
 h2 span,
@@ -65,9 +81,9 @@ a:not(.work) {
 
 header {
 	clear: both;
-	height: $navHeight;
 	position: fixed;
 	left: 0;
+	padding: 0 rem(10);
 	right: 0;
 	top: 0;
 	z-index: $GLOBAL_HEADER--zIndex;
@@ -76,7 +92,7 @@ header {
 		font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
 		float: left;
 		font-size: 3.5em;
-		margin: rem(35) 0;
+		margin: rem(18) 0;
 	}
 
 	nav {
@@ -87,9 +103,9 @@ header {
 			display: inline-block;
 			font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
 			font-size: 2rem;
-			margin: rem(47) $gutter 0 0;
 			position: relative;
 			text-decoration: none;
+			margin: rem(28) $gutter 0 0;
 
 			&:after {
 				background-color: $black;
@@ -117,6 +133,19 @@ header {
 			}
 		}
 	}
+
+	@include breakpoint(48em) {
+		height: $navHeight;
+		padding: 0;
+
+		h1 {
+			margin: rem(35) 0;
+		}
+
+		a {
+			margin: rem(47) $gutter 0 0;
+		}
+	}
 }
 
 header, nav, .work-index {
@@ -128,29 +157,79 @@ header, nav, .work-index {
 }
 
 .work {
-	float: left;
-	background-color: #DDD;
-	width: 570px;
-	height: 380px;
+	width: 100%;
 	margin-left: 0;
-	margin-right: $gutter;
-	position: relative;
-	margin-bottom: $gutter;
-
-	p {
-		position: absolute;
-	}
 
 	img {
 		width: 100%;
-		height: auto;
 	}
 
-	&:nth-child(even) {
-		margin-right: 0;
-	}
+	// @media screen and (max-width: 435px) {
+	// 	margin-left: $gutter;
+	// }
 
-	@media screen and (max-width: 435px) {
-		margin-left: $gutter;
+	@include breakpoint(48em) {
+		float: left;
+		background-color: #DDD;
+		width: 570px;
+		height: 380px;
+		overflow: hidden;
+		margin-left: 0;
+		margin-right: $gutter;
+		position: relative;
+		margin-bottom: $gutter;
+
+		p {
+			position: absolute;
+			z-index: 100;
+			bottom: 0;
+			left: 30px;
+			color: white;
+			font-family: BebasNeueBold;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
 	}
 }
+
+ /* imghvr-flip-*
+   ----------------------------- */
+/* [class^='imghvr-flip-'], [class*=' imghvr-flip-'] {
+	@include perspective(50em);
+	img {
+		backface-visibility: hidden;
+	}
+	figcaption {
+		opacity: 0;
+	}
+	&:hover {
+		> img {
+			opacity: 0;
+		}
+		figcaption {
+			opacity: 1;
+			@include transition-delay($transition-duration * 0.4);
+		}
+	}
+
+
+.imghvr-flip-diag-1 {
+	figcaption {
+		@include transform(rotate3d(1,-1,0,100deg));
+	}
+	&:hover {
+		> img {
+			@include transform(rotate3d(-1,1,0,100deg));
+		}
+		figcaption {
+			@include transform(rotate3d(0,0,0,0deg));
+		}
+	}
+} */
