@@ -1,2 +1,9 @@
-<p><%= project["name"] %></p>
-<p><%= project["blurb"] %></p>
+<section class="container showcase">
+	<img src="/<%= project["default_img"] %>" alt="">
+	<h3>project</h3>
+	<p><%= project["name"] %></p>
+	<p><%= project["blurb"] %></p>
+	<% if project['feature'] != "" %>
+	<img src="/<%= project['feature'] %>" alt="">
+	<% end %>
+</section>
