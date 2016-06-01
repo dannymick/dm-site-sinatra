@@ -4,6 +4,8 @@
 
 body {
 	background-color: $white;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 200;
 }
 
 .container {
@@ -14,6 +16,10 @@ body {
 	}
 }
 
+.work-index, .showcase {
+	margin-top: rem(130);
+}
+
 .inner {
 	margin: 0 auto;
 	width: rem(585);
@@ -21,8 +27,20 @@ body {
 
 .cv {
 	margin-top: $navHeight;
-	z-index: $CV--zIndex;
+	z-index: 0;
 	position: relative;
+
+	@include breakpoint(48em) {
+		z-index: $CV--zIndex;
+	}
+
+	&.inner {
+		width: 298px;
+
+		@include breakpoint(48em) {
+			width: rem(585);
+		}
+	}
 
 	h2, h3 {
 		font-family: BebasNeue;
@@ -43,7 +61,7 @@ body {
 
 h2 span,
 .cv p {
-	font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 	line-height: 1.5;
 	font-size: rem(16);
 }
@@ -52,7 +70,7 @@ h2 span,
 	margin-bottom: 60px;
 }
 
-a:not(.work) {
+.cv a:not(.work) {
 	color: $black;
 	position: relative;
 	text-decoration: none;
@@ -80,7 +98,13 @@ a:not(.work) {
 }
 
 header {
+	// background-color: rgba(255,255,255,.9);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.9) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,.9) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,.9) 100%); 
+	border-bottom: 1px solid #000;
 	clear: both;
+	height: 4rem;
 	position: fixed;
 	left: 0;
 	padding: 0 rem(10);
@@ -92,7 +116,13 @@ header {
 		font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
 		float: left;
 		font-size: 3.5em;
-		margin: rem(18) 0;
+		height: 42px;
+		margin-top: 10px;
+
+		a {
+			color: $black;
+			text-decoration: none;
+		}
 	}
 
 	nav {
@@ -105,7 +135,7 @@ header {
 			font-size: 2rem;
 			position: relative;
 			text-decoration: none;
-			margin: rem(28) $gutter 0 0;
+			margin: rem(36) $gutter 0 0;
 
 			&:after {
 				background-color: $black;
@@ -139,7 +169,8 @@ header {
 		padding: 0;
 
 		h1 {
-			margin: rem(35) 0;
+			height: 42px;
+			margin-top: 26px;
 		}
 
 		a {
@@ -148,15 +179,13 @@ header {
 	}
 }
 
-header, nav, .work-index {
+nav, .work-index {
 	margin-bottom: $gutter;
 }
 
-.work-index {
-	margin-top: rem(126);
-}
-
 .work {
+	// max-height: 220px;
+	margin-bottom: 12px;
 	width: 100%;
 	margin-left: 0;
 
@@ -164,9 +193,21 @@ header, nav, .work-index {
 		width: 100%;
 	}
 
+	figcaption {
+		display: none;
+	}
+
 	// @media screen and (max-width: 435px) {
 	// 	margin-left: $gutter;
 	// }
+
+	/* @include breakpoint(23.4375em) {
+		max-height: 260px;
+	}
+
+	@include breakpoint(25.6875em) {
+		max-height: 304px;
+	} */
 
 	@include breakpoint(48em) {
 		float: left;
@@ -196,6 +237,21 @@ header, nav, .work-index {
 		&:nth-child(even) {
 			margin-right: 0;
 		}
+	}
+}
+
+.showcase {
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.showcase--copy {
+		padding: 0 6px;
+	}
+
+	h3 {
+		font-weight: 700;
 	}
 }
 

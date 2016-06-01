@@ -30,7 +30,9 @@ Functions
 /* z-index scale */
 /* z-index implementations */
 body {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200; }
 
 .container {
   margin: 0 auto;
@@ -39,14 +41,25 @@ body {
     .container {
       width: 73.125rem; } }
 
+.work-index, .showcase {
+  margin-top: 8.125rem; }
+
 .inner {
   margin: 0 auto;
   width: 36.5625rem; }
 
 .cv {
-  margin-top: 7.875rem;
-  z-index: 3;
+  margin-top: 6.25rem;
+  z-index: 0;
   position: relative; }
+  @media screen and (min-width: 48em) {
+    .cv {
+      z-index: 3; } }
+  .cv.inner {
+    width: 298px; }
+    @media screen and (min-width: 48em) {
+      .cv.inner {
+        width: 36.5625rem; } }
   .cv h2, .cv h3 {
     font-family: BebasNeue;
     text-rendering: optimizelegibility; }
@@ -57,18 +70,18 @@ body {
 
 h2 span,
 .cv p {
-  font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-size: 1rem; }
 
 .job {
   margin-bottom: 60px; }
 
-a:not(.work) {
+.cv a:not(.work) {
   color: #222222;
   position: relative;
   text-decoration: none; }
-  a:not(.work):after {
+  .cv a:not(.work):after {
     background-color: #222222;
     bottom: 0;
     content: "";
@@ -80,12 +93,19 @@ a:not(.work) {
     transform: scaleX(0);
     transition: 0.37s cubic-bezier(0.52, 0.01, 0.16, 1);
     width: 100%; }
-  a:not(.work):hover:after {
+  .cv a:not(.work):hover:after {
     transition: 0.37s cubic-bezier(0.52, 0.01, 0.16, 1);
     transform: scaleX(1); }
 
 header {
+  background: -moz-linear-gradient(top, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-bottom: 1px solid #000;
   clear: both;
+  height: 4rem;
   position: fixed;
   left: 0;
   padding: 0 0.625rem;
@@ -96,7 +116,11 @@ header {
     font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
     float: left;
     font-size: 3.5em;
-    margin: 1.125rem 0; }
+    height: 42px;
+    margin-top: 10px; }
+    header h1 a {
+      color: #222222;
+      text-decoration: none; }
   header nav {
     float: right; }
     header nav a {
@@ -106,7 +130,7 @@ header {
       font-size: 2rem;
       position: relative;
       text-decoration: none;
-      margin: 1.75rem 1.875rem 0 0; }
+      margin: 2.25rem 1.875rem 0 0; }
       header nav a:after {
         background-color: #222222;
         bottom: 0;
@@ -126,24 +150,32 @@ header {
         margin-right: 0; }
   @media screen and (min-width: 48em) {
     header {
-      height: 7.875rem;
+      height: 6.25rem;
       padding: 0; }
       header h1 {
-        margin: 2.1875rem 0; }
+        height: 42px;
+        margin-top: 26px; }
       header a {
         margin: 2.9375rem 1.875rem 0 0; } }
 
-header, nav, .work-index {
+nav, .work-index {
   margin-bottom: 1.875rem; }
 
-.work-index {
-  margin-top: 7.875rem; }
-
 .work {
+  margin-bottom: 12px;
   width: 100%;
-  margin-left: 0; }
+  margin-left: 0;
+  /* @include breakpoint(23.4375em) {
+		max-height: 260px;
+	}
+
+	@include breakpoint(25.6875em) {
+		max-height: 304px;
+	} */ }
   .work img {
     width: 100%; }
+  .work figcaption {
+    display: none; }
   @media screen and (min-width: 48em) {
     .work {
       float: left;
@@ -167,6 +199,16 @@ header, nav, .work-index {
         height: auto; }
       .work:nth-child(even) {
         margin-right: 0; } }
+
+.showcase img {
+  display: block;
+  width: 100%; }
+
+.showcase .showcase--copy {
+  padding: 0 6px; }
+
+.showcase h3 {
+  font-weight: 700; }
 
 /* imghvr-flip-*
    ----------------------------- */
