@@ -1,3 +1,6 @@
+/* global variables & config switches */
+
+/* Fonts */
 @font-face {
  	font-family: BebasNeue;
  	src: url("BebasNeue.otf") format("opentype");
@@ -22,3 +25,23 @@
  	font-family: BebasNeueLight;
  	src: url("BebasNeueLight.otf") format("opentype");
 }
+
+/* Colors */
+$black: #222222;
+$white: #FFFFFF;
+
+/* Units */
+$gutter: 	30px;
+$navHeight: 100px;
+
+/* Transitions */
+$standard_transition: .37s cubic-bezier(.52,.01,.16,1);
+
+/* z-index scale */
+$z1: 1;
+$z2: 2;
+$z3: 3;
+
+/* z-index implementations */
+$GLOBAL_HEADER--zIndex: $z1;
+$CV--zIndex: 			$z3;

@@ -1,6 +1,6 @@
-/* 
-Mixins
- */
+/* Mixins & Functions */
+
+/* Mixins */
  @mixin opensans ($weight, $style, $size) {
    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: $weight;
@@ -28,11 +28,7 @@ Mixins
   }
 }
 
-
-
-/* 
-Functions
- */
+/* Functions */
 @function rem($size) {
   $remSize: $size / 16;
   @return #{$remSize}rem;

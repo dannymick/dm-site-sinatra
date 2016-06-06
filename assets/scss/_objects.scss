@@ -1,0 +1,14 @@
+/* Design patterns */
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	@include breakpoint(48em) {
+		width: rem(1170);
+	}
+}
+
+.inner {
+	margin: 0 auto;
+	width: rem(585);
+}
