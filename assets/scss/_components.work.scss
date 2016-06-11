@@ -1,0 +1,43 @@
+.work {
+	margin-bottom: 12px;
+	width: 100%;
+	margin-left: 0;
+
+	img {
+		width: 100%;
+	}
+
+	figcaption {
+		display: none;
+	}
+
+	@include breakpoint(48em) {
+		float: left;
+		background-color: #DDD;
+		width: 570px;
+		height: 380px;
+		overflow: hidden;
+		margin-left: 0;
+		margin-right: $gutter;
+		position: relative;
+		margin-bottom: $gutter;
+
+		p {
+			position: absolute;
+			z-index: 100;
+			bottom: 0;
+			left: 30px;
+			color: white;
+			font-family: BebasNeueBold;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+}
