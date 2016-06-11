@@ -1,0 +1,73 @@
+header {
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.9) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,.9) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,.9) 100%); 
+	border-bottom: 1px solid #000;
+	clear: both;
+	height: 4rem;
+	left: 0;
+	padding: 0 rem(10);
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: $GLOBAL_HEADER--zIndex;
+	
+	h1 {
+		font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
+		float: left;
+		font-size: 3.5em;
+		height: 42px;
+		margin-top: 10px;
+	}
+
+	nav {
+		float: right;
+
+		a {
+			display: inline-block;
+			font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
+			font-size: 2rem;
+			position: relative;
+			margin: rem(36) $gutter 0 0;
+
+			&:after {
+				background-color: $black;
+				bottom: 0;
+				content: "";
+				height: 2px;
+				left: 0;
+				margin-top: 2px;
+				position: absolute;
+				transform-origin: 0 0;
+				transform: scaleX(0);
+				transition: $standard_transition;
+				width: 100%;
+			}
+
+			&:hover {
+				&:after {
+					transition: $standard_transition;
+					transform: scaleX(1);
+				}
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@include breakpoint(48em) {
+		height: $nav-height;
+		padding: 0;
+
+		h1 {
+			height: 42px;
+			margin-top: 26px;
+		}
+
+		a {
+			margin: rem(47) $gutter 0 0;
+		}
+	}
+}
