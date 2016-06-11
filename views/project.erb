@@ -1,8 +1,10 @@
-<section class="container showcase">
+<section class="container project__showcase">
 	<img src="/<%= project["default_img"] %>" alt="">
-	<h3>project</h3>
-	<p><%= project["name"] %></p>
-	<p><%= project["blurb"] %></p>
+	<section class="showcase__blurb">
+		<h3>project</h3>
+		<p><%= project["name"] %></p>
+		<p><%= project["blurb"] %></p>
+	</section>
 	<% if project['feature'] != "" %>
 	<img src="/<%= project['feature'] %>" alt="">
 	<% end %>
