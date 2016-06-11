@@ -1,0 +1,71 @@
+.cv {
+	margin-top: $nav-height;
+	z-index: 0;
+	position: relative;
+
+	@include breakpoint(48em) {
+		z-index: $CV--zIndex;
+	}
+
+	&.inner {
+		width: 298px;
+
+		@include breakpoint(48em) {
+			width: rem(585);
+		}
+	}
+
+	h2, h3 {
+		font-family: BebasNeue;
+		text-rendering: optimizelegibility;
+	}
+
+	h2 {
+		@include tracking(25);
+	}
+
+	h3 {
+		@include tracking(50);
+		a {
+			// @include tracking(50);
+		}
+	}
+}
+
+h2 span,
+.cv p {
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.5;
+	font-size: rem(16);
+}
+
+.job {
+	margin-bottom: 60px;
+}
+
+.cv a:not(.work) {
+	color: $black;
+	position: relative;
+	text-decoration: none;
+
+	&:after {
+		background-color: $black;
+		bottom: 0;
+		content: "";
+		height: 2px;
+		left: 0;
+		margin-top: 2px;
+		position: absolute;
+		transform-origin: 0 0;
+		transform: scaleX(0);
+		transition: $standard_transition;
+		width: 100%;
+	}
+
+	&:hover {
+		&:after {
+			transition: $standard_transition;
+			transform: scaleX(1);
+		}
+	}
+}
