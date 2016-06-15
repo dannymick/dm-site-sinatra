@@ -1,11 +1,7 @@
 .cv {
-	margin-top: $nav-height;
-	z-index: 0;
+	// margin-top: $nav-height;
+	margin: $nav-height auto;
 	position: relative;
-
-	@include breakpoint(48em) {
-		z-index: $CV--zIndex;
-	}
 
 	&.inner {
 		width: 298px;
