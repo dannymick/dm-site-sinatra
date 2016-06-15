@@ -28,7 +28,7 @@ header {
 			font-family: BebasNeueBold, 'Helvetica Neue', 'sans-serif';
 			font-size: 2rem;
 			position: relative;
-			margin: rem(36) $gutter 0 0;
+			margin: rem(20) $gutter 0 0;
 
 			&:after {
 				background-color: $black;
@@ -65,9 +65,11 @@ header {
 			height: 42px;
 			margin-top: 26px;
 		}
-
-		a {
-			margin: rem(47) $gutter 0 0;
+	
+		nav {
+			a {
+				margin: rem(40) $gutter 0 0;
+			}
 		}
 	}
 }
