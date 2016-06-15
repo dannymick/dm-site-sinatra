@@ -4,7 +4,7 @@
   "default_img": "slader_imac.jpg",
   "client": "",
   "feature": "",
-  "blurb": "Slader is an online student resource for tutoring, textbook solutions and a forum for knowledge. My responsibilites included revamping the entire front end of the Slader website,"
+  "blurb": "Slader is an online student resource for tutoring, textbook solutions and a forum for knowledge. I was responsible for revamping the entire front end of the Slader website and building interactive UI in jQuery and plain old vanilla JavaScript."
 },
 {
 	"name": "sumday",
@@ -12,7 +12,7 @@
   "default_img": "sumday_macbook.jpg",
   "client": "BNY Mellon [MRY]",
   "feature": "sumday_showcase.png",
-  "blurb": "Sumday is a investment app that allows you to save for your future by simply adding the #sumday hashtag to your social media posts."
+  "blurb": "Sumday is a investment web app that allows you to save for your future by simply adding the #sumday hashtag to your social media posts. This project was built for BNY Mellon to help make investing seamless and \"fun\".<br><br>I helped build the front end interface in Angular(v1) and Sass."
 },
 {
 	"name": "tylenol",
@@ -20,15 +20,15 @@
   "default_img": "tylenol_macbook.jpg",
   "client": "Tylenol [MRY]",
   "feature": "",
-  "blurb": "America's hangover cure, Tylenol, reached out to MRY for a hip new responsive website with a Drupal 7 backend to replace their old, ugly flash website. Over the course of six weeks I worked on this project with two other developers, all three of us had no prior knowledge of Drupal or Drupal theming but we managed to pull it out in the tight timeframe."
+  "blurb": "America's hangover cure, Tylenol, reached out to MRY for a hip new responsive website with a Drupal 7 backend to replace their old, ugly flash website.<br><br>Over the course of six weeks I worked on this project with two other developers, all three of us had no prior knowledge of Drupal or Drupal theming but we managed to pull it out in the tight timeframe."
 },
 {
-  "name": "sierra-mist",
+  "name": "sierra mist",
   "url": "http://www.sierramist.com/",
   "default_img": "sierra_mist_feature.jpg",
   "client": "Pepsi Co. [Kettle]",
   "feature": "",
-  "blurb": ""
+  "blurb": "Sierra Mist, a.k.a. Pepsi's answer to Coco Cola's Sprite, went through a major re-design and introduced a couple new flavors. Pepsi wanted a simple single page website with eye-catching design and animations to entice Millennials (or anyone who likes to ride skateboards on their bellies for that matter) to get them to purchase Sierra Mist and savor it.<br><br>The site was built using Sass with custom made CSS3 transitions, jQuery and the History API."
 },
 {
 	"name": "mry",
@@ -36,13 +36,13 @@
   "default_img": "mry_macbook.jpg",
   "client": "MRY",
   "feature": "",
-  "blurb": ""
+  "blurb": "After the New York LBi office merged with a small agency by the name of Mr. Youth, the powers that be decided that both agencies should become one brand and MRY was born. Once the new logo was established, next on the agenda was to build a cutting-edge website to attract new clients.<br><br> A few colleagues and I were selected to undertake the build with a deadline tighter than most client of our work, we had all of two weeks for development and QA. After many consecutive long days &amp; nights (yes, we sacraficed our weekends &amp; sanity) we managed to get it deployed before the brand relaunch at SXSW. In the end, I'd say I'm pretty happy with the end result despite all the suffering we endured."
 },
 {
-	"name": "jade-hotel",
+	"name": "the jade hotel",
   "url": "http://www.thejadenyc.com/",
   "default_img": "jade_imac.jpg",
   "client": "Jade Hotel [Open Hospitality]",
   "feature": "",
-  "blurb": ""
+  "blurb": "The Jade Hotel opened it's doors in 2012 and they wanted a sleek responsive website and booking engine.<br><br> My main task was to bring rich UI to the out-dated, proprietary Open Hospitality booking engine. Using Underscore & Backbone I was able to build a completely custom calendar module and checkout process. Some of the work I did on this project is still being used by Open Hospitality today. Admittedly, it's probably due for another rewrite!"
 }]
