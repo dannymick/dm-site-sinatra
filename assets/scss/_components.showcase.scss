@@ -1,0 +1,60 @@
+.project__showcase {
+	img {
+		display: block;
+		float: none;
+		margin-bottom: 30px;
+		// margin-right: 22px;
+		margin-right: 68px;
+		width: 100%;
+
+		@include breakpoint(64em) {
+			float: left;
+			width: 500px;
+		}
+
+		@include breakpoint(70em) {
+			width: 660px;
+		}
+	}
+
+	.showcase__blurb {
+		float: none;
+		margin: 30px auto;
+		padding: 0 6px;
+
+		@include breakpoint(64em) {
+			float: left;
+			width: 430px;
+		}
+
+		@include breakpoint(70em) {
+			margin-top: 0;
+		}
+	}
+
+	.showcase__anchor {
+		background-color: $white;
+		border: 2px solid $black;
+		color: $black;
+		display: block;
+		padding: 8px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 30px;
+		transition: background-color $standard_transition;
+		width: 50%;
+
+		&:hover {
+			transition: background-color $standard_transition;
+			transition: color $standard_transition;
+			background-color: $black;
+			color: $white;
+		}
+	}
+
+	h3 {
+		font-size: 3rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
