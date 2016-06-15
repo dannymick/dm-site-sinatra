@@ -1,9 +1,9 @@
 <section class="container project__showcase">
 	<img src="/<%= project["default_img"] %>" alt="">
 	<section class="showcase__blurb">
-		<h3>project</h3>
-		<p><%= project["name"] %></p>
+		<h3><%= project["name"] %></h3>
 		<p><%= project["blurb"] %></p>
+		<a href="<%= project["url"] %>" target="_blank" class="showcase__anchor">View project</a>
 	</section>
 	<% if project['feature'] != "" %>
 	<img src="/<%= project['feature'] %>" alt="">
