@@ -17,25 +17,12 @@
 	opacity: 0;
 }
 
-.work-index, .showcase {
+.work-index, 
+.project__showcase,
+.cv {
 	margin-top: rem(130);
 }
 
 nav, .work-index {
 	margin-bottom: $gutter;
-}
-
-.project__showcase {
-	img {
-		display: block;
-		width: 100%;
-	}
-
-	.showcase__blurb {
-		padding: 0 6px;
-	}
-
-	h3 {
-		font-weight: 700;
-	}
 }
